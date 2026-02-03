@@ -298,9 +298,24 @@
       }
       .prob-person {
         font-size: 3em;
+        width: 80px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 3px solid;
       }
-      .prob-person.group-a { color: #4ecdc4; }
-      .prob-person.group-b { color: #ff6b6b; }
+      .prob-person.group-a {
+        border-color: #4ecdc4;
+        background: rgba(78, 205, 196, 0.15);
+        box-shadow: 0 0 20px rgba(78, 205, 196, 0.3);
+      }
+      .prob-person.group-b {
+        border-color: #ff6b6b;
+        background: rgba(255, 107, 107, 0.15);
+        box-shadow: 0 0 20px rgba(255, 107, 107, 0.3);
+      }
       .prob-arrow {
         color: #444;
         font-size: 1.5em;
