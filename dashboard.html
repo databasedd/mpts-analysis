@@ -31,16 +31,13 @@
         text-align: center;
         padding: 50px 20px 40px;
         margin-bottom: 40px;
-        background: rgba(10, 10, 10, 0.6);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        background: #000;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
       }
       .hero-logo {
         height: 100px;
         width: auto;
         margin-bottom: 20px;
-        filter: drop-shadow(0 0 30px rgba(0, 255, 65, 0.15));
       }
       .hero-header h1 {
         margin-bottom: 8px;
@@ -168,29 +165,33 @@
       }
 
       /* Mode toggle */
-      .mode-toggle { margin-bottom: 20px; display: flex; align-items: center; gap: 15px; }
+      .mode-toggle { margin-bottom: 20px; display: flex; align-items: center; gap: 15px; justify-content: center; }
       #modeToggle {
-        padding: 8px 16px;
-        background: rgba(255, 255, 255, 0.03);
+        padding: 12px 24px;
+        background: rgba(0, 255, 65, 0.1);
         backdrop-filter: blur(4px);
         -webkit-backdrop-filter: blur(4px);
-        color: #888;
-        border: 1px solid rgba(255, 255, 255, 0.08);
+        color: #00ff41;
+        border: 1px solid #00ff41;
         cursor: pointer;
         font-family: inherit;
-        font-size: 0.85em;
-        transition: all 0.2s;
+        font-size: 0.9em;
+        font-weight: 500;
+        transition: all 0.3s;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        box-shadow: 0 0 20px rgba(0, 255, 65, 0.15);
       }
       #modeToggle:hover {
-        background: rgba(255, 255, 255, 0.08);
-        border-color: rgba(255, 255, 255, 0.2);
-        color: #fff;
+        background: rgba(0, 255, 65, 0.2);
+        box-shadow: 0 0 30px rgba(0, 255, 65, 0.3);
+        transform: translateY(-1px);
       }
       #modeToggle.active {
         background: rgba(255, 51, 51, 0.2);
         border-color: #ff3333;
         color: #ff3333;
-        box-shadow: 0 0 20px rgba(255, 51, 51, 0.2);
+        box-shadow: 0 0 25px rgba(255, 51, 51, 0.3);
       }
 
       /* Sources panel */
@@ -294,6 +295,13 @@
 
     <div class="container">
       <div class="status-filters" id="statusFilters"></div>
+      <div class="stats" id="stats"></div>
+
+      <div class="chart-container full-width">
+        <h2>Allegation Type</h2>
+        <div class="filters" id="filters"></div>
+      </div>
+
       <div class="mode-toggle">
         <button id="modeToggle">Show Over/Under Representation</button>
         <span id="modeHint" style="color: #666; font-size: 0.85em;"></span>
@@ -310,12 +318,6 @@
         <p style="margin-top: 15px; color: #444; font-size: 0.9em;">
           Note: Baseline percentages are estimates. Some categories use proportions from aggregated "White Other" data.
         </p>
-      </div>
-      <div class="stats" id="stats"></div>
-
-      <div class="chart-container full-width">
-        <h2>Allegation Type</h2>
-        <div class="filters" id="filters"></div>
       </div>
 
       <div class="chart-section">
