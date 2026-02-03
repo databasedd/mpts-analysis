@@ -1,0 +1,66 @@
+{
+  "tag": "main",
+  "id": "main",
+  "classes": null,
+  "childCount": 1,
+  "children": [
+    {
+      "tag": "div",
+      "id": "hearingSearch",
+      "classes": "p-hearing-search p-hearing-search--mpt c-page__container",
+      "childCount": 2,
+      "children": [
+        {
+          "tag": "div",
+          "id": "hearingSearchErrorSummary",
+          "classes": "p-decision-tool-question__error-summary c-error-summary c-error-summary--hide",
+          "childCount": 2,
+          "children": [
+            {
+              "tag": "i",
+              "id": null,
+              "classes": "fa-solid fa-triangle-exclamation c-error-summary__icon",
+              "childCount": 0
+            },
+            {
+              "tag": "div",
+              "id": null,
+              "classes": "c-error-summary__content",
+              "childCount": 2,
+              "children": []
+            }
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": "p-hearing-search__row row",
+          "childCount": 3,
+          "children": [
+            {
+              "tag": "div",
+              "id": null,
+              "classes": "p-hearing-search__intro col-12",
+              "childCount": 4,
+              "children": []
+            },
+            {
+              "tag": "div",
+              "id": null,
+              "classes": "col-12",
+              "childCount": 1,
+              "children": []
+            },
+            {
+              "tag": "div",
+              "id": null,
+              "classes": "col-12",
+              "childCount": 1,
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | MPTS Tribunal Analysis | databased</title>
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+        background: linear-gradient(135deg, #0a0a0a 0%, #000 50%, #0d1117 100%);
+        background-attachment: fixed;
+        color: #fff;
+        padding: 0;
+        line-height: 1.7;
+        min-height: 100vh;
+      }
+      a { color: #00ff41; text-decoration: none; }
+      a:hover { color: #fff; text-decoration: underline; }
+
+      /* Hero Header */
+      .hero-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 50px 20px 40px;
+        margin-bottom: 40px;
+        background: rgba(10, 10, 10, 0.6);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .hero-logo {
+        height: 100px;
+        width: auto;
+        margin-bottom: 20px;
+        filter: drop-shadow(0 0 30px rgba(0, 255, 65, 0.15));
+      }
+      .hero-header h1 {
+        margin-bottom: 8px;
+        font-size: 2.2em;
+        font-weight: normal;
+        text-shadow: 0 0 40px rgba(0, 255, 65, 0.1);
+      }
+      .hero-subtitle { color: #666; font-size: 0.95em; }
+      .hero-nav {
+        margin-top: 20px;
+        display: flex;
+        gap: 20px;
+      }
+      .hero-nav a {
+        color: #666;
+        text-decoration: none;
+        font-size: 0.85em;
+        padding: 6px 12px;
+        border: 1px solid transparent;
+        transition: all 0.2s;
+      }
+      .hero-nav a:hover {
+        color: #00ff41;
+        border-color: rgba(0, 255, 65, 0.3);
+      }
+      .hero-nav a.active {
+        color: #00ff41;
+        border-color: rgba(0, 255, 65, 0.5);
+      }
+
+      /* Container */
+      .container { max-width: 800px; margin: 0 auto; padding: 0 20px 60px; }
+
+      /* Content sections */
+      .section {
+        background: rgba(10, 10, 10, 0.7);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        padding: 30px;
+        margin-bottom: 20px;
+      }
+      .section h2 {
+        color: #00ff41;
+        font-size: 1em;
+        font-weight: normal;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 20px;
+        text-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+      }
+      .section p {
+        color: #888;
+        margin-bottom: 15px;
+      }
+      .section p:last-child { margin-bottom: 0; }
+      .section ul {
+        color: #888;
+        padding-left: 20px;
+        margin-bottom: 15px;
+      }
+      .section li { margin-bottom: 8px; }
+      .section strong { color: #fff; font-weight: normal; }
+
+      /* Highlight boxes */
+      .highlight {
+        background: rgba(0, 255, 65, 0.05);
+        border-left: 2px solid #00ff41;
+        padding: 15px 20px;
+        margin: 20px 0;
+      }
+      .highlight p { color: #888; margin: 0; }
+
+      .warning {
+        background: rgba(255, 51, 51, 0.05);
+        border-left: 2px solid #ff3333;
+        padding: 15px 20px;
+        margin: 20px 0;
+      }
+      .warning p { color: #888; margin: 0; }
+
+      /* Footer */
+      .footer {
+        text-align: center;
+        padding: 40px 20px;
+        color: #444;
+        font-size: 0.85em;
+      }
+      .footer a { color: #666; }
+      .footer a:hover { color: #00ff41; }
+
+      @media (max-width: 600px) {
+        .hero-header { padding: 30px 15px; }
+        .hero-logo { height: 70px; }
+        .hero-header h1 { font-size: 1.6em; }
+        .section { padding: 20px; }
+      }
+    </style>
+</head>
+<body>
+    <div class="hero-header">
+      <img src="databased-logo.png" alt="databased" class="hero-logo" />
+      <h1>MPTS Tribunal Analysis</h1>
+      <p class="hero-subtitle">About this project</p>
+      <nav class="hero-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="about.html" class="active">About</a>
+      </nav>
+    </div>
+
+    <div class="container">
+      <div class="section">
+        <h2>What is this?</h2>
+        <p>This dashboard analyzes <strong>Medical Practitioners Tribunal Service (MPTS)</strong> hearings to explore potential patterns in how doctors from different ethnic backgrounds are represented in tribunal proceedings.</p>
+        <p>The MPTS is responsible for investigating fitness to practise concerns about doctors in the UK. This project collects publicly available tribunal data and categorizes cases by inferred ethnicity, allegation type, and outcome.</p>
+      </div>
+
+      <div class="section">
+        <h2>Data Source</h2>
+        <p>All data is scraped from the <a href="https://www.mpts-uk.org/hearings-and-decisions" target="_blank">MPTS public hearings database</a>. This includes:</p>
+        <ul>
+          <li>Doctor names and registration details</li>
+          <li>Hearing dates and venues</li>
+          <li>Allegation categories and descriptions</li>
+          <li>Tribunal outcomes and determinations</li>
+          <li>Primary Medical Qualification (PMQ) country</li>
+        </ul>
+        <p>The data is refreshed periodically to include new hearings.</p>
+      </div>
+
+      <div class="section">
+        <h2>Methodology</h2>
+        <p>Ethnicity is <strong>inferred</strong> using multiple signals, as it is not directly recorded in MPTS data:</p>
+        <ul>
+          <li><strong>Primary Medical Qualification (PMQ) country</strong> &mdash; Where the doctor obtained their medical degree (strongest signal)</li>
+          <li><strong>Name pattern matching</strong> &mdash; Surname and first name patterns associated with specific ethnic backgrounds</li>
+          <li><strong>Confidence weighting</strong> &mdash; PMQ-based classification takes priority over name-based inference</li>
+        </ul>
+        <div class="highlight">
+          <p>The classification assigns each case to a single ethnic category. This is a simplification &mdash; individuals may have mixed heritage or not fit neatly into categories.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Limitations</h2>
+        <div class="warning">
+          <p><strong>This analysis has significant limitations and should be interpreted with caution.</strong></p>
+        </div>
+        <ul>
+          <li><strong>Inferred ethnicity is not self-reported</strong> &mdash; Misclassifications are inevitable</li>
+          <li><strong>Name-based classification is imprecise</strong> &mdash; Names can be shared across ethnicities, changed through marriage, anglicized, etc.</li>
+          <li><strong>Sample size varies</strong> &mdash; Some ethnic categories have very few cases, making statistical comparisons unreliable</li>
+          <li><strong>Confounding factors</strong> &mdash; Differences in representation may reflect factors other than bias (specialty distribution, career stage, referral patterns)</li>
+          <li><strong>"Unknown" category</strong> &mdash; Cases where ethnicity could not be inferred are excluded from percentage calculations</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Representation Ratios</h2>
+        <p>The dashboard can show <strong>over/under representation ratios</strong> comparing tribunal appearances to workforce composition:</p>
+        <ul>
+          <li><strong>Ratio = 1.0</strong> &mdash; Proportional representation (tribunal % equals workforce %)</li>
+          <li><strong>Ratio > 1.0</strong> &mdash; Overrepresented in tribunals relative to workforce</li>
+          <li><strong>Ratio < 1.0</strong> &mdash; Underrepresented in tribunals relative to workforce</li>
+        </ul>
+        <p>Workforce baseline data is sourced from GMC and NHS statistics on the ethnic composition of UK doctors.</p>
+      </div>
+
+      <div class="section">
+        <h2>Purpose</h2>
+        <p>This project exists to support <strong>academic research and public transparency</strong> regarding potential disparities in medical tribunal outcomes.</p>
+        <p>Previous research has suggested that doctors from ethnic minority backgrounds may face higher rates of referral to fitness to practise proceedings. This dashboard aims to make the publicly available MPTS data more accessible for analysis.</p>
+        <div class="highlight">
+          <p>This is not an accusation of bias. Disparities in representation may have many explanations. The goal is to surface the data for further investigation.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Sources & References</h2>
+        <ul>
+          <li><a href="https://www.mpts-uk.org/hearings-and-decisions" target="_blank">MPTS Hearings and Decisions</a></li>
+          <li><a href="https://www.gmc-uk.org/about/what-we-do-and-why/data-and-research/the-state-of-medical-education-and-practice-in-the-uk/workforce-report" target="_blank">GMC State of Medical Education and Practice</a></li>
+          <li><a href="https://www.ethnicity-facts-figures.service.gov.uk/workforce-and-business/workforce-diversity/nhs-workforce/latest/" target="_blank">NHS Workforce Statistics (GOV.UK)</a></li>
+          <li><a href="https://ifs.org.uk/publications/ethnic-diversity-nhs-doctors" target="_blank">IFS: Ethnic Diversity of NHS Doctors</a></li>
+          <li><a href="https://commonslibrary.parliament.uk/research-briefings/cbp-7783/" target="_blank">House of Commons: NHS Staff from Overseas</a></li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Contact</h2>
+        <p>This project is part of <strong>databased</strong>, a collection of data analysis projects.</p>
+        <p>For questions or feedback, please open an issue on the project repository.</p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p><a href="https://github.com/databased">databased</a> &mdash; data analysis, evidence-based.</p>
+    </div>
+</body>
+</html>
